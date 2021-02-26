@@ -27,7 +27,7 @@
 [Rarity] == "Magic" # [AugmentIfPossible] == "true"
 
 // Limiting maps' tier to 6 to keep us within Chaos recipe zone
-[MapTier] >= "10" # [IgnoreMap] == "true"
+[MapTier] >= "7" # [IgnoreMap] == "true"
 
 // === 2 Map types - UpgradeTier. These will be sold in a quantity of 3 pcs. to get 1 of higher tier ===
 
