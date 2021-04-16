@@ -1,8 +1,10 @@
 # Maps.ipd
-Updated maps config - 3.13 Ritual League
+Updated maps config - 3.14 Ultimatum League
 
 Ignores and upgrades bad & impossible maps to run with EB
 
-Rerolls magic maps with ele reflect/no regen
+Reflect rules will depends on build, so I have them both in there. Pick your poison.
 
-Ignores rare maps with ele reflect/no regen
+Rerolls magic maps with ele&phys reflect/no regen
+
+Ignores rare maps with ele&phys reflect/no regen
