@@ -14,7 +14,7 @@ _____________
 - [x]  phys reflect
 - [x]  no regen
 - [ ]  all other map mod options
-
+_____________
 - [x] Ignores rare maps with ele&phys reflect/no regen
 - [x] ele reflect
 - [x] phys reflect
