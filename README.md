@@ -20,4 +20,4 @@ _____________
 - [x] phys reflect
 - [x] no regen
 - [ ] all other map mod options
-- [ ] Blighted maps - added at the bottom
+- [x] Blighted maps - added at the bottom
