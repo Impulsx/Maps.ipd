@@ -528,7 +528,7 @@
 // [map_player_has_level_X_vulnerability] >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Vulnerability                  -- Players are cursed with Vulnerability
 
 // Blighted maps
-[10112] == "1"  [10314] == "1"  [10398] == "1"  # [IgnoreMap] == "true"
+[10112] == "1" && [10314] == "1" && [10398] == "1" # [IgnoreMap] == "true"
 
 
 // === 7 Original intro ===
