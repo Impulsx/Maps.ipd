@@ -53,7 +53,7 @@
 // [Type] == "Overgrown Ruin Map" # [UpgradeMapTier] == "true"
 // [Type] == "Overgrown Shrine Map" # [UpgradeMapTier] == "true"
 // [Type] == "Palace Map" # [UpgradeMapTier] == "true"
-// [Type] == "Pen Map" # [UpgradeMapTier] == "true"
+[Type] == "Pen Map" # [UpgradeMapTier] == "true"
 // [Type] == "Racecourse Map" # [UpgradeMapTier] == "true"
 // [Type] == "Ramparts Map" # [UpgradeMapTier] == "true"
 // [Type] == "Tower Map" # [UpgradeMapTier] == "true"
@@ -124,7 +124,7 @@
 [Type] == "Leyline Map"                 # [RunMap] == "true"
 [Type] == "Maelström of Chaos"          # [RunMap] == "true"
 [Type] == "Palace Map"                  # [RunMap] == "true"
-[Type] == "Plaza Map"                   # [RunMap] == "true"
+// [Type] == "Plaza Map"                   # [RunMap] == "true"
 [Type] == "Ramparts Map"                # [RunMap] == "true"
 [Type] == "Summit Map"                  # [RunMap] == "true"
 [Type] == "Terrace Map"                 # [RunMap] == "true"
@@ -261,7 +261,7 @@
 [Type] == "Mineral Pools Map"           # [RunMap] == "true"
 [Type] == "Necropolis Map"              # [RunMap] == "true"
 [Type] == "Orchard Map"                 # [RunMap] == "true"
-[Type] == "Pen Map"                     # [RunMap] == "true"
+// [Type] == "Pen Map"                     # [RunMap] == "true"
 [Type] == "Promenade Map"               # [RunMap] == "true"
 
 // Guardian maps
