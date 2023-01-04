@@ -33,11 +33,11 @@
 [Rarity] == "Magic" 	# [AugmentIfPossible] == "true"
 
 // Upgrade to YELLOW
-// [Rarity] == "Normal" # [UpgradeToRare] == "true"
+[Rarity] == "Normal" # [UpgradeToRare] == "true"
 
 // Map Progression
-[MapTier] >= "1" && [MapTier] <= "5" && [Rarity] == "Normal" # [UpgradeToMagic] == "true"
-[MapTier] >= "6" && [MapTier] <= "10" [Rarity] == "Normal" # [UpgradeToRare] == "true"
+// [MapTier] >= "1" && [MapTier] <= "5" && [Rarity] == "Normal" # [UpgradeToMagic] == "true"
+// [MapTier] >= "6" && [MapTier] <= "10" [Rarity] == "Normal" # [UpgradeToRare] == "true"
 // [MapTier] >= "10" && [MapTier] <= "16" [Rarity] == "Normal" # [UpgradeToRare] == "true" // when? && [CorruptMap] == "true"
 
 // Limiting maps' tier to 6 to keep us within Chaos recipe zone
