@@ -568,7 +568,6 @@
 // [map_players_no_regeneration_including_es] >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
 
 
-
 // [map_player_has_level_X_temporal_chains] >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Temporal Chains -- Players are cursed with Temporal Chains
 // [map_player_has_level_X_temporal_chains] >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Temporal Chains -- Players are cursed with Temporal Chains
 // [map_monsters_base_self_critical_strike_multiplier_-%] >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Toughness -- Mobs take reduced Crit Damage
