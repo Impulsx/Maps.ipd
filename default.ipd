@@ -20,7 +20,7 @@
 
 // Upgrading Maps' quality
 // [Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true"
-// [MapTier] >= "6" && [MapTier] <= "10" && [Rarity] == "Normal" # [UpgradeToRare] == "true"
+[MapTier] >= "6" && [MapTier] <= "10" && [Rarity] == "Normal" && [Quality] <= "16" # [UpgradeQuality] == "true" // yellow maps only
 
 
 // Tiers to run (difficult to use since one Map can have up to four tiers)
