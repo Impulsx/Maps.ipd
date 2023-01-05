@@ -19,7 +19,9 @@
 // === 1 Settings ===
 
 // Upgrading Maps' quality
-[Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true"
+// [Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true"
+// [MapTier] >= "6" && [MapTier] <= "10" && [Rarity] == "Normal" # [UpgradeToRare] == "true"
+
 
 // Tiers to run (difficult to use since one Map can have up to four tiers)
 // [MapTier] >= "1" && [MapTier] <= "16" # [RunMap] == "true"
@@ -37,8 +39,8 @@
 
 // Map Progression
 // [MapTier] >= "1" && [MapTier] <= "5" && [Rarity] == "Normal" # [UpgradeToMagic] == "true"
-// [MapTier] >= "6" && [MapTier] <= "10" [Rarity] == "Normal" # [UpgradeToRare] == "true"
-// [MapTier] >= "10" && [MapTier] <= "16" [Rarity] == "Normal" # [UpgradeToRare] == "true" // when? && [CorruptMap] == "true"
+// [MapTier] >= "6" && [MapTier] <= "10" && [Rarity] == "Normal" # [UpgradeToRare] == "true"
+// [MapTier] >= "10" && [MapTier] <= "16" && [Rarity] == "Normal" # [UpgradeToRare] == "true" // when? && [CorruptMap] == "true"
 
 // Limiting maps' tier to 6 to keep us within Chaos recipe zone
 // [MapTier] >= "8" # [IgnoreMap] == "true"
@@ -566,6 +568,7 @@
 // [map_players_block_chance_+%] < "0" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Rust -- Players have -% Block Chance/ -% Less Armour
 // [map_players_block_chance_+%] < "0" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Rust -- Players have -% Block Chance/ -% Less Armour
 // [map_players_no_regeneration_including_es] >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
+
 
 
 // [map_player_has_level_X_temporal_chains] >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Temporal Chains -- Players are cursed with Temporal Chains
