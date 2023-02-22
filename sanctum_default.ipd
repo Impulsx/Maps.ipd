@@ -85,7 +85,7 @@
 // [Type] == "Lair Map" 			# [SkipBossArena] == "true" // Wolf boss  w/o tele phasee
 // [Type] == "Lava Chamber Map" 	# [SkipBossArena] == "true" // Buttons on the arena to press
 // [Type] == "Malformation Map" 	# [SkipBossArena] == "true" // Corrupted Piety boss
-// [Type] == "Pier Map" 			# [SkipBossArena] == "true" // Traps
+[Type] == "Pier Map" 			# [SkipBossArena] == "true" // Traps
 // [Type] == "Racecourse Map" 		# [SkipBossArena] == "true" // Mini-boss with damage reflection aura
 // [Type] == "Reef Map" 			# [SkipBossArena] == "true" // (\/)!_!(\/) boss
 // [Type] == "Siege Map" 			# [SkipBossArena] == "true" // Tukokhama boss
@@ -329,14 +329,20 @@
 [Type] == "Strand Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Whakawairua Tuahu
 
 //// IMPORTANT REROLL XOR IGNORE MODS REFLECT + NOREGEN ////
-
 // REROLL magic maps with Alteration
 // [map_monsters_reflect_%_elemental_damage] 	>= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
 // [map_monsters_reflect_%_physical_damage] 	>= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Punishing -- Monsters Reflect % Physical Damage
 [map_players_no_regeneration_including_es] 	>= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
 [map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
-[15475] 	>= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Aura effect
+// [map_player_life_and_es_recovery_speed_+%] <= "-1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
+// [15475] 	>= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Aura effect
+[map_player_non_curse_aura_effect_+%] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Aura effect
+// [5286] <= "-1" && [Rarity] == "Magic" # [RerollMods] == "true" //  Players Recover Life and Energy Shield
+// [5286] < "0" && [Rarity] == "Magic" # [RerollMods] == "true" //  Players Recover Life and Energy Shield
+// [5286] > "1" && [Rarity] == "Magic" # [RerollMods] == "true" //  Players Recover Life and Energy Shield
 
+// [map_player_cooldown_speed_+%_final] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // CDR
+// [map_player_charges_gained_+%] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // FlaskCharges
 
 // IGNORE magic maps
 // [map_monsters_reflect_%_elemental_damage] 	>= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
@@ -354,17 +360,26 @@
 // [map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
 // [15475] 	>= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Aura effect
 
+// [map_players_no_regeneration_including_es] 	>= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
+// [map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
+// [5286] <= "-1" && [Rarity] == "Rare" # [RerollMods] == "true" // Players Recover Life and Energy Shield
+// [5286] < "0" && [Rarity] == "Rare" # [RerollMods] == "true" //  Players Recover Life and Energy Shield
+// [5286] > "1" && [Rarity] == "Rare" # [RerollMods] == "true" //  Players Recover Life and Energy Shield
+
+// [map_player_non_curse_aura_effect_+%] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Aura effect
+// [15475] 	>= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Aura effect
+
+// [map_player_cooldown_speed_+%_final] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // CDR
+// [map_player_charges_gained_+%] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // FlaskCharges
 
 
 // IGNORE rare maps
 // [map_monsters_reflect_%_elemental_damage] 	>= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
 // [map_monsters_reflect_%_physical_damage] 	>= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Punishing -- Monsters Reflect % Physical Damage
 // [map_players_no_regeneration_including_es] 	>= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-
-[map_players_no_regeneration_including_es] 	>= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-[map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
-[15475] 	>= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Aura effect
-
+[map_players_no_regeneration_including_es] 	>= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
+[map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
+[map_player_non_curse_aura_effect_+%] >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Aura effect
 
 
 
