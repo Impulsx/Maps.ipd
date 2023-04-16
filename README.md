@@ -1,5 +1,5 @@
 # Maps.ipd :shipit:
-## Updated maps config - 3.20 Forbidden Sanctum League :trollface:
+## Updated maps config - 3.21 CruciBLEH League :trollface:
 _____________
 
 :godmode: Ignores and upgrades bad & impossible maps to run with EB
