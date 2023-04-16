@@ -103,7 +103,7 @@
 [Type] == "Cage Map" 			# [RunMap] == "true"
 [Type] == "Graveyard Map" 		# [RunMap] == "true"
 [Type] == "Iceberg Map" 			# [RunMap] == "true"
-[Type] == "Infested Valley Map" 	# [SkipBossArena] == "true" // bugged pathfinding/summ minions/3 poisonplant boss mech
+[Type] == "Infested Valley Map" 	# [UpgradeMapTier] == "true" // bugged pathfinding/summ minions/3 poison plant boss mechanic
 [Type] == "Lava Chamber Map"		# [RunMap] == "true"
 [Type] == "Residence Map" 		# [RunMap] == "true"
 [Type] == "Scriptorium Map" 		# [RunMap] == "true"
