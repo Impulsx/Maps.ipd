@@ -53,7 +53,7 @@
 // === 2 Map types - UpgradeTier. These will be sold in a quantity of 3 pcs. to get 1 of higher tier ===
 
 // Upgrade low map tier
-[MapTier] >= "1" && [MapTier] <= "3" # [UpgradeMapTier] == "true" //
+[MapTier] >= "1" && [MapTier] <= "5" # [UpgradeMapTier] == "true" //
 // [MapTier] >= "1" && [MapTier] <= "7" # [UpgradeMapTier] == "true" //
 
 
