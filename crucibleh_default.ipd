@@ -179,7 +179,7 @@
 ///////////////////////
 [Type] == "Arachnid Nest Map" 		# [RunMap] == "true"
 [Type] == "Atoll Map" 				# [RunMap] == "true"
-[Type] == "Caldera Map" 			# [RunMap] == "true"
+[Type] == "Caldera Map" 			# [UpgradeMapTier] == "true" // bugged transitions
 [Type] == "Cemetery Map" 			# [RunMap] == "true"
 [Type] == "Core Map" 				# [RunMap] == "true"
 [Type] == "Fungal Hollow Map" 		# [RunMap] == "true"
