@@ -53,7 +53,7 @@
 // === 2 Map types - UpgradeTier. These will be sold in a quantity of 3 pcs. to get 1 of higher tier ===
 
 // Upgrade low map tier
-[MapTier] >= "1" && [MapTier] <= "4" # [UpgradeMapTier] == "true" //
+[MapTier] >= "1" && [MapTier] <= "6" # [UpgradeMapTier] == "true" //
 // [MapTier] >= "1" && [MapTier] <= "7" # [UpgradeMapTier] == "true" //
 
 
@@ -72,7 +72,7 @@
 // [Type] == "Overgrown Shrine Map" # [UpgradeMapTier] == "true"
 // [Type] == "Palace Map" 			# [UpgradeMapTier] == "true"
 // [Type] == "Racecourse Map" 		# [UpgradeMapTier] == "true"
-// [Type] == "Ramparts Map" 		# [UpgradeMapTier] == "true"
+// [Type] == "Ramparts Map" 		# [UpgradeMapTier] == "true" --
 // [Type] == "Tower Map" 			# [UpgradeMapTier] == "true"
 // [Type] == "Tropical Island Map" 	# [UpgradeMapTier] == "true"
 // [Type] == "Vaal Pyramid Map" 	# [UpgradeMapTier] == "true"
@@ -283,11 +283,11 @@
 // [6831] == "2" # [IgnoreMap] == "true" // Elder maps
 
 // Conquerors
-[13855] >= "1" # [IgnoreMap] == "true" // Conq maps
-// [13855] == "1" # [IgnoreMap] == "true" // Baron maps
-// [13855] == "2" # [IgnoreMap] == "true" // Veritania maps
-// [13855] == "3" # [IgnoreMap] == "true" // Drox maps
-// [13855] == "4" # [IgnoreMap] == "true" // Al-Hezmin maps
+[13845] >= "1" # [IgnoreMap] == "true" // Conq maps
+// [13845] == "1" # [IgnoreMap] == "true" // Baron maps
+// [13845] == "2" # [IgnoreMap] == "true" // Veritania maps
+// [13845] == "3" # [IgnoreMap] == "true" // Drox maps
+// [13845] == "4" # [IgnoreMap] == "true" // Al-Hezmin maps
 
 // Synthesized maps
 [Type] == "Synthesised Map" # [IgnoreMap] == "true"
