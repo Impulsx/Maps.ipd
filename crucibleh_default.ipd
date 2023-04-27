@@ -27,7 +27,7 @@
 // [MapTier] >= "16" # [IgnoreMap] == "true"   // run all tiers
 // [MapTier] >= "6" # [IgnoreMap] == "true"    // white
 // [MapTier] > "8" # [IgnoreMap] == "true"    // chaos recipe
-[MapTier] >= "11" # [IgnoreMap] == "true"    // yellow
+[MapTier] >= "12" # [IgnoreMap] == "true"    // yellow
 // [MapTier] > "15" # [IgnoreMap] == "true"   // run all but t16
 // [MapTier] < "14" # [IgnoreMap] == "true"    // run only +t14
 // [MapTier] < "16" # [IgnoreMap] == "true" // run only t16
@@ -53,7 +53,7 @@
 // === 2 Map types - UpgradeTier. These will be sold in a quantity of 3 pcs. to get 1 of higher tier ===
 
 // Upgrade low map tier
-[MapTier] >= "1" && [MapTier] <= "6" # [UpgradeMapTier] == "true" //
+[MapTier] >= "1" && [MapTier] <= "5" # [UpgradeMapTier] == "true" //
 // [MapTier] >= "1" && [MapTier] <= "7" # [UpgradeMapTier] == "true" //
 
 
