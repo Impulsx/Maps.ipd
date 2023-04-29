@@ -27,7 +27,7 @@
 // [MapTier] >= "16" # [IgnoreMap] == "true"   // run all tiers
 // [MapTier] >= "6" # [IgnoreMap] == "true"    // white
 // [MapTier] > "8" # [IgnoreMap] == "true"    // chaos recipe
-[MapTier] >= "12" # [IgnoreMap] == "true"    // yellow
+[MapTier] >= "14" # [IgnoreMap] == "true"    // yellow
 // [MapTier] > "15" # [IgnoreMap] == "true"   // run all but t16
 // [MapTier] < "14" # [IgnoreMap] == "true"    // run only +t14
 // [MapTier] < "16" # [IgnoreMap] == "true" // run only t16
@@ -277,23 +277,23 @@
 ///////////////////////
 //    ATLAS MAPS     //
 ///////////////////////
-// Shaper / Elder
-[6831] >= "1" # [IgnoreMap] == "true" // Shaper/Elder maps
-// [6831] == "1" # [IgnoreMap] == "true" // Shaper maps
-// [6831] == "2" # [IgnoreMap] == "true" // Elder maps
+// Shaper / Elder //6827
+[map_atlas_influence_type] >= "1" # [IgnoreMap] == "true" // Shaper/Elder maps
+// [map_atlas_influence_type] == "1" # [IgnoreMap] == "true" // Shaper maps
+// [map_atlas_influence_type] == "2" # [IgnoreMap] == "true" // Elder maps
 
-// Conquerors
-[13845] >= "1" # [IgnoreMap] == "true" // Conq maps
-// [13845] == "1" # [IgnoreMap] == "true" // Baron maps
-// [13845] == "2" # [IgnoreMap] == "true" // Veritania maps
-// [13845] == "3" # [IgnoreMap] == "true" // Drox maps
-// [13845] == "4" # [IgnoreMap] == "true" // Al-Hezmin maps
+// Conquerors //13845
+[map_contains_citadel] >= "1" # [IgnoreMap] == "true" // Conq maps
+// [map_contains_citadel] == "1" # [IgnoreMap] == "true" // Baron maps
+// [map_contains_citadel] == "2" # [IgnoreMap] == "true" // Veritania maps
+// [map_contains_citadel] == "3" # [IgnoreMap] == "true" // Drox maps
+// [map_contains_citadel] == "4" # [IgnoreMap] == "true" // Al-Hezmin maps
 
 // Synthesized maps
 [Type] == "Synthesised Map" # [IgnoreMap] == "true"
 
-// Delirium maps
-[11508] >= "1" # [IgnoreMap] == "true" // Delirium maps
+// Delirium maps 11508>11504-11506
+[map_endgame_fog_depth] >= "1" # [IgnoreMap] == "true" // Delirium maps
 
 ///////////////////////
 //    Unique Maps    //
@@ -618,6 +618,8 @@
 // Big thanks to jps42 for updating and improving this file.
 // Example: Run rare Maps level less than 3
 // [MapTier] >= "1" && [MapTier] < "3" && [Rarity] == "Rare" # [RunMap] == "true"
+
+// [ExitAfterBossKill] is a thing too, guess what it does.
 // ====================================
 
 
