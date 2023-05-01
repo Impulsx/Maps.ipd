@@ -10,13 +10,18 @@ _____________
 - [ ] Are commented out with //
 _____________
 - [x] Rerolls magic maps with:
-- [x]  ele reflect
-- [x]  phys reflect
-- [x]  no regen
+- [ ]  ele reflect
+- [ ]  phys reflect
+- [x]  Cannot regen
+- [x]  Less regen
 - [x]  Decrease Aura Effect
 - [ ]  all other map mod options
 _____________
-- [x] Ignores rare maps with magic reroll mods
+- [x] Rerolls rare maps with: the same magic reroll mod rules above
 - [ ] all other map mod options
+_____________
+Ignores:
 - [x] Blighted maps
 - [x] Influance maps
+- [x] Delirium maps
+- [x] Synthesized maps
