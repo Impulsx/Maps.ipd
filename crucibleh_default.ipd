@@ -21,17 +21,21 @@
 // Upgrading Maps' quality
 // [Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true"
 // [MapTier] >= "6" && [MapTier] <= "10" && [Rarity] == "Normal" && [Quality] <= "16" # [UpgradeQuality] == "true" // yellow maps only
+// [MapTier] >= "10" && [MapTier] <= "16" && [Rarity] == "Normal" && [Quality] <= "16" # [UpgradeQuality] == "true" // red maps only
 
 // Tiers to run (difficult to use since one Map can have up to four tiers)
 // [RunMap] rules are Meta rules and will override specific map rules
 [MapTier] >= "16" # [IgnoreMap] == "true"   // run all tiers
 // [MapTier] >= "6" # [IgnoreMap] == "true"    // white
-// [MapTier] > "8" # [IgnoreMap] == "true"    // chaos recipe
 // [MapTier] >= "11" # [IgnoreMap] == "true"    // yellow
 
 // [MapTier] > "15" # [IgnoreMap] == "true"   // run all but t16
 // [MapTier] < "14" # [IgnoreMap] == "true"    // run only +t14
 // [MapTier] < "16" # [IgnoreMap] == "true" // run only t16
+
+// Limiting maps' tier to 6-8 to keep us within Chaos recipe zone
+// [MapTier] >= "8" # [IgnoreMap] == "true"
+
 
 // Upgrading Maps' rarity - XOR
 
@@ -47,14 +51,10 @@
 // Upgrade to YELLOW
 [Rarity] == "Normal" # [UpgradeToRare] == "true"
 
-// Limiting maps' tier to 6-8 to keep us within Chaos recipe zone
-// [MapTier] >= "8" # [IgnoreMap] == "true"
-
-
 // === 2 Map types - UpgradeTier. These will be sold in a quantity of 3 pcs. to get 1 of higher tier ===
 
 // Upgrade low map tier
-[MapTier] >= "1" && [MapTier] <= "5" # [UpgradeMapTier] == "true" //
+// [MapTier] >= "1" && [MapTier] <= "5" # [UpgradeMapTier] == "true" //
 // [MapTier] >= "1" && [MapTier] <= "7" # [UpgradeMapTier] == "true" //
 
 
@@ -299,32 +299,34 @@
 ///////////////////////
 //    Unique Maps    //
 ///////////////////////
-[Type] == "Overgrown Shrine Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Acton's Nightmare
-[Type] == "Siege Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Altered Distant Memory
-[Type] == "Haunted Mansion Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Augmented Distant Memory - NEW SCOURGE
-[Type] == "Underground River Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Caer Blaidd, Wolfpack's Den
-[Type] == "Relic Chambers Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Cortex
-[Type] == "Necropolis Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Death and Taxes
-[Type] == "Maze Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Doryani's Machinarium
-[Type] == "Promenade Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Hall of Grandmasters
-[Type] == "Cemetery Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Hallowed Ground
-[Type] == "Atoll Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Maelström of Chaos
-[Type] == "Shore Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Mao Kun
-[Type] == "Underground Sea Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Oba's Cursed Trove
-[Type] == "Bone Crypt Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Olmec's Sanctum
-[Type] == "Dunes Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Pillars of Arun
-[Type] == "Temple Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Poorjoy's Asylum
-[Type] == "Basilica Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Rewritten Distant Memory
-[Type] == "Harbinger Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Beachhead, Infused Beachhead
-[Type] == "Cursed Crypt Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Coward's Trial
-[Type] == "Chateau Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Perandus Manor
-[Type] == "Museum Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Putrid Cloister
-[Type] == "Moon Temple Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Twilight Temple
-[Type] == "Courtyard Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Vinktar Square
-[Type] == "Park Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Twisted Distant Memory
-[Type] == "Tropical Island Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Untainted Paradise
-[Type] == "Vaal Pyramid Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Vaults of Atziri
-[Type] == "Strand Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Whakawairua Tuahu
+[Rarity] == "Unique" # [IgnoreMap] == "true" // Meta rule
+
+// [Type] == "Overgrown Shrine Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Acton's Nightmare
+// [Type] == "Siege Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Altered Distant Memory
+// [Type] == "Haunted Mansion Map"  	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Augmented Distant Memory - NEW SCOURGE
+// [Type] == "Underground River Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Caer Blaidd, Wolfpack's Den
+// [Type] == "Relic Chambers Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Cortex
+// [Type] == "Necropolis Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Death and Taxes
+// [Type] == "Maze Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Doryani's Machinarium
+// [Type] == "Promenade Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Hall of Grandmasters
+// [Type] == "Cemetery Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Hallowed Ground
+// [Type] == "Atoll Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Maelström of Chaos
+// [Type] == "Shore Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Mao Kun
+// [Type] == "Underground Sea Map" 	    && [Rarity] == "Unique" # [IgnoreMap] == "true" // Oba's Cursed Trove
+// [Type] == "Bone Crypt Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Olmec's Sanctum
+// [Type] == "Dunes Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Pillars of Arun
+// [Type] == "Temple Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Poorjoy's Asylum
+// [Type] == "Basilica Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Rewritten Distant Memory
+// [Type] == "Harbinger Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Beachhead, Infused Beachhead
+// [Type] == "Cursed Crypt Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Coward's Trial
+// [Type] == "Chateau Map" 			    && [Rarity] == "Unique" # [IgnoreMap] == "true" // The Perandus Manor
+// [Type] == "Museum Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Putrid Cloister
+// [Type] == "Moon Temple Map" 		    && [Rarity] == "Unique" # [IgnoreMap] == "true" // The Twilight Temple
+// [Type] == "Courtyard Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Vinktar Square
+// [Type] == "Park Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Twisted Distant Memory
+// [Type] == "Tropical Island Map" 	    && [Rarity] == "Unique" # [IgnoreMap] == "true" // Untainted Paradise
+// [Type] == "Vaal Pyramid Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Vaults of Atziri
+// [Type] == "Strand Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Whakawairua Tuahu
 
 //// IMPORTANT REROLL XOR IGNORE MODS REFLECT + NOREGEN ////
 // REROLL magic maps with Alteration
