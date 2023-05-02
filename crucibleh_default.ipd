@@ -19,19 +19,20 @@
 // === 1 Settings ===
 
 // Upgrading Maps' quality
-// [Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true"
+[Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true"
 // [MapTier] >= "6" && [MapTier] <= "10" && [Rarity] == "Normal" && [Quality] <= "16" # [UpgradeQuality] == "true" // yellow maps only
 // [MapTier] >= "10" && [MapTier] <= "16" && [Rarity] == "Normal" && [Quality] <= "16" # [UpgradeQuality] == "true" // red maps only
 
 // Tiers to run (difficult to use since one Map can have up to four tiers)
 // [RunMap] rules are Meta rules and will override specific map rules
-[MapTier] >= "16" # [IgnoreMap] == "true"   // run all tiers
-// [MapTier] >= "6" # [IgnoreMap] == "true"    // white
-// [MapTier] >= "11" # [IgnoreMap] == "true"    // yellow
+// [MapTier] <= "5" # [IgnoreMap] == "true"                         // ignore white
+// [MapTier] >= "6" && [MapTier] <= "10" # [IgnoreMap] == "true"    // ignore yellow
+// [MapTier] >= "11" # [IgnoreMap] == "true"                        // ignore red
 
-// [MapTier] > "15" # [IgnoreMap] == "true"   // run all but t16
-// [MapTier] < "14" # [IgnoreMap] == "true"    // run only +t14
-// [MapTier] < "16" # [IgnoreMap] == "true" // run only t16
+[MapTier] >= "17" # [IgnoreMap] == "true"       // Run all
+// [MapTier] >= "16" # [IgnoreMap] == "true"    // run all but t16
+// [MapTier] < "14" # [IgnoreMap] == "true"     // run only +t14
+// [MapTier] < "16" # [IgnoreMap] == "true"     // run only t16
 
 // Limiting maps' tier to 6-8 to keep us within Chaos recipe zone
 // [MapTier] >= "8" # [IgnoreMap] == "true"
