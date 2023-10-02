@@ -5,6 +5,7 @@ _____________
 :godmode: Ignores and upgrades bad & impossible maps to run with EB
 
 :finnadie: Rerolls bad map mods 
+
 Reflect rules will depends on build, so I have them both in there. Pick your poison.
 _____________
 - [x] Are defaults -- verify what your build requires and if you want to reroll rares
