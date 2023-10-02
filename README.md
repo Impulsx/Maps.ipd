@@ -1,5 +1,5 @@
 # Maps.ipd :shipit:
-## Updated maps config - 3.21 CruciBLEH League :trollface:
+## Updated maps config - 3.22 Ancestor League :trollface:
 _____________
 
 :godmode: Ignores and upgrades bad & impossible maps to run with EB
