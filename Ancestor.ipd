@@ -356,7 +356,7 @@
 ///////////////////////
 //    Unique Maps    //
 ///////////////////////
-// [Rarity] == "Unique" # [IgnoreMap] == "true" // Meta rule
+[Rarity] == "Unique" # [IgnoreMap] == "true" // Meta rule
 
 // [Type] == "Overgrown Shrine Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Acton's Nightmare
 // [Type] == "Underground River Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Caer Blaidd, Wolfpack's Den

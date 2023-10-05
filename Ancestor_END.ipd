@@ -41,8 +41,8 @@
 // [MapTier] >= "17"                     # [IgnoreMap] == "true"    // Run all
 // [MapTier] >= "14"                     # [IgnoreMap] == "true"    // run all but +t14
 // [MapTier] >= "16"                     # [IgnoreMap] == "true"    // run all but t16
-// [MapTier] < "14"                      # [IgnoreMap] == "true"     // run only +t14
-[MapTier] < "16"                      # [IgnoreMap] == "true"     // run only t16
+[MapTier] < "14"                      # [IgnoreMap] == "true"     // run only +t14
+// [MapTier] < "16"                      # [IgnoreMap] == "true"     // run only t16
 
 // Limiting maps' tier to 6-8 to keep us within Chaos recipe zone
 // [MapTier] >= "8" # [IgnoreMap] == "true"
@@ -356,7 +356,7 @@
 ///////////////////////
 //    Unique Maps    //
 ///////////////////////
-// [Rarity] == "Unique" # [IgnoreMap] == "true" // Meta rule
+[Rarity] == "Unique" # [IgnoreMap] == "true" // Meta rule
 
 // [Type] == "Overgrown Shrine Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Acton's Nightmare
 // [Type] == "Underground River Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Caer Blaidd, Wolfpack's Den
