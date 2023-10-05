@@ -11,28 +11,38 @@
 // 2 Map Types 	- UpgradeTier
 // 3 Map Types 	- SkipBossArena
 // 4 Map Types 	- RunMap
-// 5 Map Mods 	- Reroll
-// 6 Map Mods 	- Ignore
-// 7 Original description from default.ipd
-// 8 PS
+// 5 IMPORTANT REROLL XOR IGNORE MODS
+// 6 Map Mods 	- Reroll
+// 7 Map Mods 	- Ignore
+// 8 Original description from default.ipd
+// 9 PS
 
-// === 1 Settings ===
+// === 1 Global - Settings ===
 
 // Upgrading Maps' quality
-// [Quality] <= "16" && [Rarity] == "Normal"                                           # [UpgradeQuality] == "true" // all
+// [Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true" // all
 // [MapTier] >= "6" && [MapTier] <= "10" && [Rarity] == "Normal" && [Quality] <= "16"  # [UpgradeQuality] == "true" // yellow maps only
 // [MapTier] >= "10" && [MapTier] <= "16" && [Rarity] == "Normal" && [Quality] <= "16" # [UpgradeQuality] == "true" // red maps only
 
+// Use this to roll for a specific amount of Item Quantity **(DOES NOT INCLUDE QUANTITY FROM QUALITY)**
+// [map_item_drop_quantity_+%] < "70" && [Rarity] == "Magic" # [RerollMods] == "true" //
+// [map_item_drop_quantity_+%] < "70" && [Rarity] == "Rare" # [RerollMods] == "true" //
+
+// Use this to roll for a specific amount of Pack Size **(DOES NOT INCLUDE PACK SIZE FROM QUALITY)**
+// [map_pack_size_+%] < "70" && [Rarity] == "Magic" # [RerollMods] == "true" //
+// [map_pack_size_+%] < "70" && [Rarity] == "Rare" # [RerollMods] == "true" //
+
+
 // Tiers to run (difficult to use since one Map can have up to four tiers)
 // [RunMap] rules are Meta rules and will override specific map rules
-// [MapTier] <= "5"                      # [IgnoreMap] == "true"                         // ignore white
+// [MapTier] <= "5"                      # [IgnoreMap] == "true"    // ignore white
 // [MapTier] >= "6" && [MapTier] <= "10" # [IgnoreMap] == "true"    // ignore yellow
-// [MapTier] >= "11"                     # [IgnoreMap] == "true"                        // ignore red
+// [MapTier] >= "11"                     # [IgnoreMap] == "true"    // ignore red
 [MapTier] >= "17"                     # [IgnoreMap] == "true"    // Run all
 // [MapTier] >= "14"                     # [IgnoreMap] == "true"    // run all but +t14
 // [MapTier] >= "16"                     # [IgnoreMap] == "true"    // run all but t16
-// [MapTier] < "14"                      # [IgnoreMap] == "true"     // run only +t14
-// [MapTier] < "16"                      # [IgnoreMap] == "true"     // run only t16
+// [MapTier] < "14"                      # [IgnoreMap] == "true"    // run only +t14
+// [MapTier] < "16"                      # [IgnoreMap] == "true"    // run only t16
 
 // Limiting maps' tier to 6-8 to keep us within Chaos recipe zone
 // [MapTier] >= "8" # [IgnoreMap] == "true"
@@ -109,30 +119,54 @@
 [Type] == "Desert Map"              # [SkipBossArena] == "true" // Boss trigger
 
 // === Farming Maps === Ignore till late game
-// MB
-// [Type] == "Crimson Temple Map"     # [RunMap] == "true"
-// [Type] == "Haunted Mansion Map"    # [RunMap] == "true"
-// [Type] == "Defiled Cathedral Map"  # [RunMap] == "true"
-// MB Connected - Due to change from league to league
-// [Type] == "City Square Map"        # [RunMap] == "true"
+// // MB
+// [Type] == "Crimson Temple Map" # [RunMap] == "true"
+// [Type] == "Haunted Mansion Map" # [RunMap] == "true"
+// [Type] == "Defiled Cathedral Map" # [RunMap] == "true"
+// // MB Connected - Due to change from league to league
+// [Type] == "City Square Map" # [RunMap] == "true"
 
-// HH
-// [Type] == "Burial Chambers Map" # [RunMap] == "true" // Multiple Transitions
-// [Type] == "Phantasmagoria Map"     # [RunMap] == "true"
-// [Type] == "Sepulchre Map"          # [RunMap] == "true"
-// [Type] == "Spider Forest Map"      # [RunMap] == "true"
-// [Type] == "Waste Pool Map"         # [RunMap] == "true"
+// // HH - Doctor
+// // [Type] == "Burial Chambers Map" # [RunMap] == "true" // Multiple Transitions
+// [Type] == "Phantasmagoria Map" # [RunMap] == "true"
+// [Type] == "Sepulchre Map" # [RunMap] == "true"
+// [Type] == "Spider Forest Map" # [RunMap] == "true"
+// [Type] == "Waste Pool Map" # [RunMap] == "true"
 
-// Brothers Exalted and Divine orb Div cards
-// [Type] == "Cemetery Map"           # [RunMap] == "true"
-// [Type] == "Grave Trough Map"       # [RunMap] == "true"
-// [Type] == "Graveyard Map"          # [RunMap] == "true"
+// // HH - Fiend - Corrupt
+// [Type] == "Foundry" # [RunMap] == "true"
+// [Type] == "Laboratory" # [RunMap] == "true"
+// [Type] == "Poorjoy's Asylum" # [RunMap] == "true"
+// [Type] == "Shrine" # [RunMap] == "true"
 
-// Bossrush
-// [Type] == "Mesa Map"               # [IgnoreMap] == "true"
-// [Type] == "Dunes Map"              # [IgnoreMap] == "true"
-// [Type] == "Strand Map"             # [IgnoreMap] == "true"
-// [Type] == "Beach Map"              # [IgnoreMap] == "true"
+// // HH - Demon - Double Corrupt
+// [Type] == "Lava Lake Map" # [RunMap] == "true" // Only from Kitava Boss
+
+// // HH - Nurse
+// [Type] == "Carcass Map" # [RunMap] == "true"
+// [Type] == "Cells Map" # [RunMap] == "true"
+// [Type] == "Core Map" # [RunMap] == "true"
+// [Type] == "Scriptorium Map" # [RunMap] == "true"
+// [Type] == "Tower Map" # [RunMap] == "true"
+
+// // HH - Patient
+// [Type] == "Armoury Map" # [RunMap] == "true"
+// [Type] == "Arsenal Map" # [RunMap] == "true"
+// [Type] == "Colonnade Map" # [RunMap] == "true"
+// [Type] == "Promenade Map" # [RunMap] == "true"
+
+// // Brothers - Exalted and Divine orb Div cards
+// [Type] == "Cemetery Map"  # [RunMap] == "true"
+// [Type] == "Grave Trough Map" # [RunMap] == "true"
+// [Type] == "Graveyard Map" # [RunMap] == "true"
+// // Brothers Connected - Due to change from league to league
+// [Type] == "Layline Map" # [RunMap] =="true"
+
+// // Bossrush
+// [Type] == "Mesa Map" # [ExitAfterBossKill] == "true"
+// [Type] == "Dunes Map" # [ExitAfterBossKill] == "true"
+// [Type] == "Strand Map" # [ExitAfterBossKill] == "true"
+// [Type] == "Beach Map" # [ExitAfterBossKill] == "true"
 
 
 // === 4 Map types - RunMap. It consists of Maps to run. Comment those you don't wanna run ===
@@ -156,13 +190,13 @@
 [Type] == "Coral Ruins Map"        # [RunMap] == "true"
 [Type] == "Coves Map"              # [RunMap] == "true"
 [Type] == "Factory Map"            # [RunMap] == "true"
-// [Type] == "Mesa Map"               # [RunMap] == "true" // stock up boss rush/legion map
+[Type] == "Mesa Map"               # [RunMap] == "true" // stock up boss rush/legion map
 [Type] == "Arena Map"              # [RunMap] == "true"
 [Type] == "Bramble Valley Map"     # [RunMap] == "true"
 [Type] == "City Square Map"        # [RunMap] == "true"
 [Type] == "Ivory Temple Map"       # [RunMap] == "true"
 [Type] == "Pen Map"                # [RunMap] == "true"
-[Type] == "Beach Map"              # [IgnoreMap] == "true"
+[Type] == "Beach Map"              # [RunMap] == "true"
 // [Type] == "Burial Chambers Map" # [RunMap] == "true" // Multiple Transitions
 [Type] == "Crystal Ore Map"        # [RunMap] == "true"
 [Type] == "Primordial Pool Map"    # [RunMap] == "true"
@@ -197,13 +231,13 @@
 [Type] == "Wasteland Map"          # [RunMap] == "true"
 [Type] == "Colosseum Map"          # [RunMap] == "true"
 [Type] == "Crimson Temple Map"     # [RunMap] == "true" // stock up & boss rush/apoth map
-// [Type] == "Dunes Map"              # [RunMap] == "true"
+[Type] == "Dunes Map"              # [RunMap] == "true"
 [Type] == "Foundry Map"            # [RunMap] == "true"
 [Type] == "Laboratory Map"         # [RunMap] == "true"
 [Type] == "Pit Map"                # [RunMap] == "true"
 [Type] == "Relic Chambers Map"     # [RunMap] == "true"
 [Type] == "Siege Map"              # [RunMap] == "true"
-[Type] == "Strand Map"             # [IgnoreMap] == "true"
+[Type] == "Strand Map"             # [RunMap] == "true"
 // [Type] == "Vault Map"           # [RunMap] == "true"  // unable to run
 [Type] == "Arachnid Nest Map"      # [RunMap] == "true"
 [Type] == "Atoll Map"              # [RunMap] == "true"
@@ -294,105 +328,126 @@
 ///////////////////////
 //    ATLAS MAPS     //
 ///////////////////////
-// Shaper / Elder //6827
-[map_atlas_influence_type] >= "1" # [IgnoreMap] == "true" // Shaper/Elder maps
+// Shaper / Elder
+[map_atlas_influence_type] >= "1" # [IgnoreMap] == "true" // All Shaper/Elder maps
 // [map_atlas_influence_type] == "1" # [IgnoreMap] == "true" // Shaper maps
 // [map_atlas_influence_type] == "2" # [IgnoreMap] == "true" // Elder maps
 
-// Conquerors //13845
-[map_contains_citadel] >= "1" # [IgnoreMap] == "true" // Conq maps
+// Conquerors
+[map_contains_citadel] >= "1" # [IgnoreMap] == "true" // All Conq maps
 // [map_contains_citadel] == "1" # [IgnoreMap] == "true" // Baron maps
 // [map_contains_citadel] == "2" # [IgnoreMap] == "true" // Veritania maps
 // [map_contains_citadel] == "3" # [IgnoreMap] == "true" // Drox maps
 // [map_contains_citadel] == "4" # [IgnoreMap] == "true" // Al-Hezmin maps
 
+// Delirium maps
+[map_endgame_fog_depth] >= "1" # [IgnoreMap] == "true"
+
+// Blighted maps
+[is_blighted] >= "1" # [IgnoreMap] == "true"
+[is_blighted_map] >= "1" # [IgnoreMap] == "true"
+[is_uber_blighted_map] >= "1" # [IgnoreMap] == "true"
+[blighted_map_mod_effect_+%] >= "1" # [IgnoreMap] == "true"
+
 // Synthesised maps
 [Type] == "Synthesised Map" # [IgnoreMap] == "true"
 
-// Delirium maps 11508>11504-11506
-[map_endgame_fog_depth] >= "1" # [IgnoreMap] == "true" // Delirium maps
 
 ///////////////////////
 //    Unique Maps    //
 ///////////////////////
-[Rarity] == "Unique" # [IgnoreMap] == "true" // Meta rule
+// [Rarity] == "Unique" # [IgnoreMap] == "true" // Meta rule
 
 // [Type] == "Overgrown Shrine Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Acton's Nightmare
-// [Type] == "Siege Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Altered Distant Memory
-// [Type] == "Haunted Mansion Map"  	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Augmented Distant Memory - NEW SCOURGE
 // [Type] == "Underground River Map" 	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Caer Blaidd, Wolfpack's Den
-// [Type] == "Relic Chambers Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Cortex
-// [Type] == "Necropolis Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Death and Taxes
-// [Type] == "Maze Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Doryani's Machinarium
-// [Type] == "Promenade Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Hall of Grandmasters
+[Type] == "Necropolis Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Death and Taxes
+[Type] == "Maze Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Doryani's Machinarium
+[Type] == "Promenade Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Hall of Grandmasters
 // [Type] == "Cemetery Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Hallowed Ground
 // [Type] == "Atoll Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Maelström of Chaos
 // [Type] == "Shore Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Mao Kun
 // [Type] == "Underground Sea Map" 	    && [Rarity] == "Unique" # [IgnoreMap] == "true" // Oba's Cursed Trove
 // [Type] == "Bone Crypt Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Olmec's Sanctum
-// [Type] == "Dunes Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Pillars of Arun
-// [Type] == "Temple Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Poorjoy's Asylum
-// [Type] == "Basilica Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Rewritten Distant Memory
-// [Type] == "Harbinger Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Beachhead, Infused Beachhead
-// [Type] == "Cursed Crypt Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Coward's Trial
+[Type] == "Dunes Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Pillars of Arun
+[Type] == "Temple Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Poorjoy's Asylum
+[Type] == "Harbinger Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Beachhead, Infused Beachhead
+[Type] == "Cursed Crypt Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Coward's Trial
 // [Type] == "Chateau Map" 			    && [Rarity] == "Unique" # [IgnoreMap] == "true" // The Perandus Manor
-// [Type] == "Museum Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Putrid Cloister
+[Type] == "Museum Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Putrid Cloister
 // [Type] == "Moon Temple Map" 		    && [Rarity] == "Unique" # [IgnoreMap] == "true" // The Twilight Temple
-// [Type] == "Courtyard Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Vinktar Square
-// [Type] == "Park Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Twisted Distant Memory
+[Type] == "Courtyard Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // The Vinktar's Square
 // [Type] == "Tropical Island Map" 	    && [Rarity] == "Unique" # [IgnoreMap] == "true" // Untainted Paradise
-// [Type] == "Vaal Pyramid Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Vaults of Atziri
+[Type] == "Vaal Pyramid Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Vaults of Atziri
 // [Type] == "Strand Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Whakawairua Tuahu
 
-//// IMPORTANT REROLL XOR IGNORE MODS REFLECT + NOREGEN ////
-// REROLL magic maps with Alteration
+// Synthisis Unique Maps
+// [Type] == "Relic Chambers Map" 		&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Cortex
+
+// [Type] == "Siege Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Altered Distant Memory
+// [Type] == "Haunted Mansion Map"  	&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Augmented Distant Memory - NEW SCOURGE
+// [Type] == "Basilica Map" 			&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Rewritten Distant Memory
+// [Type] == "Park Map" 				&& [Rarity] == "Unique" # [IgnoreMap] == "true" // Twisted Distant Memory
+
+
+//// IMPORTANT REROLL XOR IGNORE MODS ////
+    // REROLL magic maps with Alteration
 // [map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Magic"       # [RerollMods] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
 // [map_monsters_reflect_%_physical_damage] >= "1" && [Rarity] == "Magic"        # [RerollMods] == "true" // Punishing -- Monsters Reflect % Physical Damage
+
 [map_players_no_regeneration_including_es] >= "1" && [Rarity] == "Magic"         # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-[map_player_non_curse_aura_effect_+%] <= "1" && [Rarity] == "Magic"              # [RerollMods] == "true" // Aura effect
-// <= "-1" && [Rarity] == "Magic"                                                # [RerollMods] == "true" // Players Recover Life and Energy Shield
-// < "0" && [Rarity] == "Magic"                                                  # [RerollMods] == "true" // Players Recover Life and Energy Shield
-// > "1" && [Rarity] == "Magic"                                                  # [RerollMods] == "true" // Players Recover Life and Energy Shield
 [map_player_life_and_es_recovery_speed_+%_final] <= "1" && [Rarity] == "Magic"   # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
-// [map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
-// [map_player_life_and_es_recovery_speed_+%] <= "-1" && [Rarity] == "Magic"     # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
+
+[map_player_non_curse_aura_effect_+%] <= "1" && [Rarity] == "Magic"              # [RerollMods] == "true" // Aura effect
 [map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Magic"       # [RerollMods] == "true" // Of Exposure -- (-X to -X)% maximum Player Resistances
+
 // [map_player_cooldown_speed_+%_final] <= "1" && [Rarity] == "Magic"            # [RerollMods] == "true" // CDR
 // [map_player_charges_gained_+%] <= "1" && [Rarity] == "Magic"                  # [RerollMods] == "true" // FlaskCharges
 
-// IGNORE magic maps
+//// IGNORE magic maps ////
 // [map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Magic"       # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
 // [map_monsters_reflect_%_physical_damage] >= "1" && [Rarity] == "Magic"        # [IgnoreMap] == "true" // Punishing -- Monsters Reflect % Physical Damage
-// [map_players_no_regeneration_including_es] >= "1" && [Rarity] == "Magic"      # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-// [map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
-// [map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Rare"  # [IgnoreMap] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
 
-// REROLL rare maps with Chaos
+// [map_players_no_regeneration_including_es] >= "1" && [Rarity] == "Magic"         # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
+// [map_player_life_and_es_recovery_speed_+%_final] <= "1" && [Rarity] == "Magic"   # [IgnoreMap] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
+
+// [map_player_non_curse_aura_effect_+%] <= "1" && [Rarity] == "Magic"              # [IgnoreMap] == "true" // Aura effect
+// [map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Magic"       # [IgnoreMap] == "true" // Of Exposure -- (-X to -X)% maximum Player Resistances
+
+// [map_player_cooldown_speed_+%_final] <= "1" && [Rarity] == "Magic"            # [IgnoreMap] == "true" // CDR
+// [map_player_charges_gained_+%] <= "1" && [Rarity] == "Magic"                  # [IgnoreMap] == "true" // FlaskCharges
+
+    // REROLL rare maps with Chaos
 // [map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Rare"       # [RerollMods] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
 // [map_monsters_reflect_%_physical_damage] >= "1" && [Rarity] == "Rare"        # [RerollMods] == "true" // Punishing -- Monsters Reflect % Physical Damage
-[map_players_no_regeneration_including_es] >= "1" && [Rarity] == "Rare"         # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-// [map_player_life_and_es_recovery_speed_+%_final] < "0" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
-// [map_player_non_curse_aura_effect_+%] <= "1" && [Rarity] == "Rare"           # [RerollMods] == "true" // Aura effect
-[map_player_life_and_es_recovery_speed_+%_final] <= "1" && [Rarity] == "Rare"   # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
-[map_player_non_curse_aura_effect_+%] <= "1" && [Rarity] == "Rare"              # [RerollMods] == "true" // Aura effect
-[map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Rare"       # [RerollMods] == "true" // Of Exposure -- (-X to -X)% maximum Player Resistances
+
+// [map_players_no_regeneration_including_es] >= "1" && [Rarity] == "Rare"         # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
+// [map_player_life_and_es_recovery_speed_+%_final] <= "1" && [Rarity] == "Rare"   # [RerollMods] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
+
+// [map_player_non_curse_aura_effect_+%] <= "1" && [Rarity] == "Rare"              # [RerollMods] == "true" // Aura effect
+// [map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Rare"       # [RerollMods] == "true" // Of Exposure -- (-X to -X)% maximum Player Resistances
+
 // [map_player_cooldown_speed_+%_final] <= "1" && [Rarity] == "Rare"            # [RerollMods] == "true" // CDR
 // [map_player_charges_gained_+%] <= "1" && [Rarity] == "Rare"                  # [RerollMods] == "true" // FlaskCharges
 
 
-// IGNORE rare maps
-// [map_monsters_reflect_%_elemental_damage] 	>= "1" && [Rarity] == "Rare"    # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
-// [map_monsters_reflect_%_physical_damage] 	>= "1" && [Rarity] == "Rare"    # [IgnoreMap] == "true" // Punishing -- Monsters Reflect % Physical Damage
-// [map_players_no_regeneration_including_es] 	>= "1" && [Rarity] == "Rare"    # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-// [map_player_life_and_es_recovery_speed_+%_final] < "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
-// [map_player_non_curse_aura_effect_+%] <= "1" && [Rarity] == "Rare"           # [IgnoreMap] == "true" // Aura effect
+//// IGNORE rare maps ////
+// [map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Rare"       # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
+// [map_monsters_reflect_%_physical_damage] >= "1" && [Rarity] == "Rare"        # [IgnoreMap] == "true" // Punishing -- Monsters Reflect % Physical Damage
+
+[map_players_no_regeneration_including_es] >= "1" && [Rarity] == "Rare"         # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
+[map_player_life_and_es_recovery_speed_+%_final] <= "1" && [Rarity] == "Rare"   # [IgnoreMap] == "true" // Of Smothering -- Players Recover Life, Mana and Energy Shield % slower
+
+[map_player_non_curse_aura_effect_+%] <= "1" && [Rarity] == "Rare"              # [IgnoreMap] == "true" // Aura effect
+[map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Rare"       # [IgnoreMap] == "true" // Of Exposure -- (-X to -X)% maximum Player Resistances
+
+// [map_player_cooldown_speed_+%_final] <= "1" && [Rarity] == "Rare"            # [IgnoreMap] == "true" // CDR
+// [map_player_charges_gained_+%] <= "1" && [Rarity] == "Rare"                  # [IgnoreMap] == "true" // FlaskCharges
 
 
-// === 5 Map Mods - REROLL ===
 
+// === 6 Map Mods - REROLL ===
 // How to Roll Pack Size - Simple leave appropriate (suffix only) pack size reroll checks (has packsize in description) COMMENTED, and uncomment the rest.
 // This will force bot to reroll/aug until packsize is rolled.
-
 // Prefix
 // [map_packs_are_abomination_monsters] >= "1" && [Rarity] == "Magic"          # [RerollMods] == "true" // Abhorrent - Monsters are abominations
 // [map_spawn_extra_exiles] >= "1" && [Rarity] == "Magic"                      # [RerollMods] == "true" // Anarchic -- 2+ Rogue Exiles
@@ -466,7 +521,7 @@
 // [map_player_has_level_X_vulnerability] >= "1" && [Rarity] == "Magic"                  # [RerollMods] == "true" // Of Vulnerability -- Players are cursed with Vulnerability
 
 
-// === 6 Map Mods - IGNORE ===
+// === 7 Map Mods - IGNORE ===
 
 // Ignore Map - (Select Map Rarity for each mod to ignore)
 // Prefix
@@ -608,10 +663,10 @@
 // [map_player_has_level_X_vulnerability] >= "1" && [Rarity] == "Magic"                  # [IgnoreMap] == "true" // Of Vulnerability -- Players are cursed with Vulnerability
 // [map_player_has_level_X_vulnerability] >= "1" && [Rarity] == "Rare"                   # [IgnoreMap] == "true" // Of Vulnerability -- Players are cursed with Vulnerability
 
-// === 7 Original intro ===
+// === 8 Original intro ===
 // ====================================
 // Welcome to the Map runner configuration file. Syntax is the same as in Pickit/default.ipd.
-// Keys available: [RunMap], [IgnoreMap], [MapTier], [UpgradeQuality], [UpgradeToMagic], [UpgradeToRare], [RerollMods], [UpgradeMapTier], [SkipBossArena].
+// Keys available: [RunMap], [IgnoreMap], [MapTier], [UpgradeQuality], [UpgradeToMagic], [UpgradeToRare], [RerollMods], [UpgradeMapTier], [SkipBossArena], [ExitAfterBossKill]
 // Please note that [IgnoreMap] has higher priority than other keys.
 // Please note that [SkipBossArena] needs bot to open Map for it to work, if you open it and then start the bot it won't work.
 // Whenever you use the "less than" symbol (<) for MapTier, you'll need to add [MapTier] >= "66" (could be more than 66 but never less). This is to avoid bug, sry about that.
@@ -620,11 +675,14 @@
 // Big thanks to jps42 for updating and improving this file.
 // Example: Run rare Maps level less than 3
 // [MapTier] >= "1" && [MapTier] < "3" && [Rarity] == "Rare" # [RunMap] == "true"
-// [ExitAfterBossKill] is a thing too, guess what it does. ^^
+
+// EXPERIMENTAL
+// [ExitAfterBossKill] - After boss is killed, leave map
+// [SkipBossArena] - Skip arena for specific map
 // ====================================
 
 
-// === 8 PS ===
+// === 9 PS ===
 // Priority list of actions is: [UpgradeMapTier](3) >> [IgnoreMap] >> [UpgradeToRare] >> [UpgradeToMagic] >> [RunMap]
 // If you enabled UpgradeMapTier and RunMap simultaneously for a Map, the bot will run that Map
 //
